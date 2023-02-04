@@ -270,7 +270,7 @@ button.btn.btn-theme-color:hover{
     background-size: cover;
 }
 
-.1gradient {
+/* .1gradient {
     left: 0;
     opacity: 0.5;
     position: absolute;
@@ -289,7 +289,7 @@ button.btn.btn-theme-color:hover{
     background: -ms-linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
     background: linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002453', endColorstr='#ff2b4a',GradientType=1 );
-}
+} */
 
 .dtable {
     display: table;
@@ -1639,7 +1639,7 @@ background: #080404;
   .navbar-collapse {
     display: block !important;
   }
-}
+}  
 
 
 
