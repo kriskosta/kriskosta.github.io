@@ -270,7 +270,7 @@ button.btn.btn-theme-color:hover{
     background-size: cover;
 }
 
-.gradient {
+.1gradient {
     left: 0;
     opacity: 0.5;
     position: absolute;
@@ -280,7 +280,7 @@ button.btn.btn-theme-color:hover{
     bottom: 0;
 }
 
-.gradient {
+.1gradient {
     background: #002453;
     background: -moz-linear-gradient(45deg, #002453 0%, #ff2b4a 100%);
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#002453), color-stop(100%,#ff2b4a));
