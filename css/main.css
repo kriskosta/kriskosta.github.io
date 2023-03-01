@@ -270,7 +270,7 @@ button.btn.btn-theme-color:hover{
     background-size: cover;
 }
 
-/* .1gradient {
+.1gradient {
     left: 0;
     opacity: 0.5;
     position: absolute;
@@ -280,7 +280,7 @@ button.btn.btn-theme-color:hover{
     bottom: 0;
 }
 
-.1gradient {
+.gradient {
     background: #002453;
     background: -moz-linear-gradient(45deg, #002453 0%, #ff2b4a 100%);
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#002453), color-stop(100%,#ff2b4a));
@@ -289,7 +289,7 @@ button.btn.btn-theme-color:hover{
     background: -ms-linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
     background: linear-gradient(45deg, #002453 0%,#ff2b4a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002453', endColorstr='#ff2b4a',GradientType=1 );
-} */
+}
 
 .dtable {
     display: table;
@@ -336,7 +336,9 @@ button.btn.btn-theme-color:hover{
 
 .about {
     background: #F7F7F7;
+background: none;
     padding-top: 100px;
+margin-bottom: 100px;
 }
 .about-intro {
     margin-top: 45px;
@@ -345,7 +347,7 @@ button.btn.btn-theme-color:hover{
 .about-intro h3 {
     font-size: 25px;
     font-weight: 400;
-    color: #444;
+    color: #fefefe;
     line-height: 1.5;
     letter-spacing: 5px;
     margin: 0;
@@ -356,17 +358,17 @@ button.btn.btn-theme-color:hover{
     font-weight: normal;
     line-height: 25px;
     margin: 12px 0;
-    color: #777;
+    color: #fefefe;
 }
 .about-intro p {
-    color: #666;
+    color: #fefefe;
 }
 .about-intro .divider {
     display: block;
     margin: 20px 0px;
     width: 150px;
     height: 2px;
-    background-color: #FF2B4A;
+    background-color: #666;
 }
 
 .about-intro .buttons {
@@ -730,7 +732,7 @@ button.btn.btn-theme-color:hover{
 ======================================================*/
 
 .contact {
-    /*background: transparent url("../img/exp.jpg") no-repeat scroll center center / cover;*/
+    background: transparent url("../img/exp.jpg") no-repeat scroll center center / cover;
     position: relative;
 }
 
@@ -1542,7 +1544,8 @@ button.btn.btn-theme-color:hover{
 #logo-img{margin: 0px; margin-top: -20px; height: 60px;}
 .site-header navbar-fixed-top navbar-default{background-color: black;}
 .navbar-default{background-color: black !important;}
-#works, #process{background: black !important; background-color: black!important; color: white !important;}
+#works{}
+#process{background-color: white !important; padding-top: 0px;}
 .title h2{color: white !important;}
 .title p{color: white !important;}
 .process-inner{height: 300px;}
@@ -1639,10 +1642,91 @@ background: #080404;
   .navbar-collapse {
     display: block !important;
   }
-}  
+}
 
 
+
+
+
+
+
+
+
+
+--------------------------------------
+
+.navbar-fixed-top{background: transparent !important;}
+
+body{background: linear-gradient(#070504, #0E1217); overflow-x: hidden;}
+.banner-content {
+    margin-top: 120px;
+}
+
+
+#bannerimg{width: 80%; margin-bottom: -100px;}
+.banner-wrap{display: flex; justify-content: center; align-items: center;}
+
+@media(max-width: 600px){#bannerimg{width: 100%; margin-top: 80px;}}
+
+h2{font-family: 'GlacialIndifferenceRegular' !important; font-weight: bold !important; text-align: center; color: #FFFFFF !important;}
+
+//.container{background:#666B6A;}
+
+
+#bannerimgprocess{width: 100%; margin-top: 80px;}
+@media(max-width: 600px){#bannerimgprocess{width: 100%; margin-top: 120px;}}
 
 li > a:hover{color: white !important;}
 
-#contact{padding-bottom: 0px;}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+height: 100vw;
+ z-index: -1;
+}
+
+
+h3{color: #66b5d5 !important;}
+h2{color: #66b5d5 !important;}
+
+#contact{margin-bottom: 0px !important; padding-bottom: 0px; padding-top: 0px;
+background-color: black !important;}
+
+#about-intro-cloud > h5{color: black !important;}
+#workswhite > h2{color: black !important;}
+#workswhite > p{color: black !important;}
+#works{background: white !important; padding: 0px;}
+#cloudimg{width: 100vw;}
+.cloudbottom{background: black; z-index: 3;}
+
+.navbar-default{max-height: 100px;}
+
+//.navbar-default{background: transparent !important; backdrop-filter: blur(2px);}
+//.navbar-default:hover{background: black !important;}
+
+
+--------------------------------------
+
+#lightboxspacing{margin-top: 200px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
