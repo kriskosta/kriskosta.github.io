@@ -1714,6 +1714,7 @@ background-color: black !important;}
 
 body{overflow-x:hidden;}
 
+.dropdown-menu>li>a:hover{color: black !important;}
 
 
 
