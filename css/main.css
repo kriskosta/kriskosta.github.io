@@ -1716,7 +1716,7 @@ body{overflow-x:hidden;}
 
 .dropdown-menu>li>a:hover{color: black !important;}
 
-
-body{overflow-x: hidden !important;}
+@media(max-width: 500px){
+	body{overflow-x: hidden !important; background: green; width: 100% !important; max-width: 100% !important;}}
 
 
