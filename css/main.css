@@ -1733,6 +1733,8 @@ body{overflow-x:hidden;}
     
 }
 
+.dropdown-toggle:active, .open .dropdown-toggle {
+        background:black !important;}
 
 
 html{overflow-x:hidden !important;}
