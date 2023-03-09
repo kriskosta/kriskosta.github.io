@@ -1718,6 +1718,8 @@ body{overflow-x:hidden;}
 	#author-pic{width: 100vw; margin: 0px !important;}
 	#contact{padding-bottom: 10px!important;}
 	.contact-form{margin-bottom: 20px;}
+	.btn-theme-color{width: 100%;}
 }
+.btn-theme-color:hover{background-color: white !important;}
 
 html{overflow-x:hidden !important;}
