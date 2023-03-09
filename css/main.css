@@ -1720,7 +1720,7 @@ body{overflow-x:hidden;}
 
 
 
-middlewrap{width: 100vw; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; align-items: center; 
+.middlewrap{width: 100vw; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; align-items: center; 
 	background: orange;}
 
 
