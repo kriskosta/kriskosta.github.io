@@ -1718,8 +1718,21 @@ body{overflow-x:hidden;}
 	#author-pic{width: 70%; margin: 0px !important;}
 	#contact{padding-bottom: 10px !important;}
 	.contact-form{margin-bottom: 20px;}
-	.btn-theme-color{width: 100%;}
+	
 }
-.btn-theme-color:hover{background-color: white !important; background: white !important;}
+
+.btn-theme-color{width: 98%; border: none !important;}
+.btn-theme-color:hover{
+    background: #ff2b4a !important;
+     color: #fff !important;
+     //color: black;
+  box-shadow: 0 0 5px #ff2b4a,
+              0 0 25px #ff2b4a,
+              0 0 50px #ff2b4a,
+              0 0 100px #ff2b4a;
+    
+}
+
+
 
 html{overflow-x:hidden !important;}
