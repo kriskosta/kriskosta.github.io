@@ -1715,7 +1715,7 @@ body{overflow-x:hidden;}
 
 @media(max-width: 600px){
 	body{overflow-x: hidden !important; width: 100vw !important; max-width: 100vw !important;}
-	#author-pic{width: 70%; margin: 0px !important;}
+	#author-pic{width: 80%; margin: 0px !important; margin-top: 20px !importnat;}
 	#contact{padding-bottom: 10px !important;}
 	.contact-form{margin-bottom: 20px;}
 	
