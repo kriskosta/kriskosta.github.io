@@ -1706,6 +1706,8 @@ background-color: black !important;}
 
 --------------------------------------
 
+html{overflow-x:hidden !important;}
+
 #lightboxspacing{margin-top: 200px;}
 
 
@@ -1736,5 +1738,8 @@ body{overflow-x:hidden;}
 .dropdown-toggle:active, .open .dropdown-toggle {
         background:black !important;}
 
+@media only screen and (max-width: 767px)
+.site-header.fixed .navbar-collapse {
+    background: black !important;}
 
-html{overflow-x:hidden !important;}
+
