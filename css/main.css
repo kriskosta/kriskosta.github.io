@@ -1655,7 +1655,7 @@ background: #080404;
 
 --------------------------------------
 
-.navbar-fixed-top{background: transparent !important;}
+.navbar-fixed-top{background: black !important;}
 
 body{background: linear-gradient(#070504, #0E1217); overflow-x: hidden;}
 .banner-content {
