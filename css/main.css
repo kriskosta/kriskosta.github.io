@@ -1721,5 +1721,6 @@ body{overflow-x:hidden;}
 
 
 .middlewrap{width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; align-items: center; 
-	background: green;}
+	background: blue;}
+body{overflow-x: hidden;}
 
