@@ -1722,5 +1722,9 @@ body{overflow-x:hidden;}
 
 .middlewrap{width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; align-items: center; 
 	background: blue;}
-body{overflow-x: hidden;}
+body{overflow-x: hidden !important;}
+
+.aos-init:not(.aos-animate):after {
+position: fixed;
+}
 
