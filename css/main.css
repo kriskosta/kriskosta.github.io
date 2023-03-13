@@ -1742,4 +1742,10 @@ body{overflow-x:hidden;}
 .site-header.fixed .navbar-collapse {
     background: black !important;}
 
-h3{font-weight: bold;}
+h3, h2{font-weight: bold; color: white !important; font-family: 'Helvetica', 'Arial', sans-serif;}
+
+h5, p{font-family: 'Helvetica', 'Arial', sans-serif;}
+
+
+
+
