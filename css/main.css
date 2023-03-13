@@ -1695,8 +1695,8 @@ h2{color: #66b5d5 !important;}
 background-color: black !important;}
 
 #about-intro-cloud > h5{color: black !important;}
-#workswhite > h2{color: black !important;}
-#workswhite > p{color: black !important;}
+#workswhite > h2{color: black !important; font-family: 'Helvetica', 'Arial', sans-serif;}
+#workswhite > p{color: black !important; font-family: 'Helvetica', 'Arial', sans-serif;}
 #works{background: white !important; padding: 0px;}
 #cloudimg{width: 100vw;}
 .cloudbottom{background: black; z-index: 3;}
