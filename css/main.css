@@ -93,7 +93,7 @@ button.btn.btn-theme-color:hover{
 }
 
 .title h2 {
-    font-size: 21px;
+    font-size: 25px;
     
     line-height: 32px;
     color: #323232;
@@ -1739,7 +1739,7 @@ body{overflow-x:hidden;}
 .site-header.fixed .navbar-collapse {
     background: black !important;}
 
-h3, h2{font-weight: bold; color: white !important; font-family: 'Helvetica', 'Arial', sans-serif;}
+h3, h2{font-weight: bold; font-size 25px !important; color: white !important; font-family: 'Helvetica', 'Arial', sans-serif;}
 
 h5, p{font-family: 'Helvetica', 'Arial', sans-serif;}
 
