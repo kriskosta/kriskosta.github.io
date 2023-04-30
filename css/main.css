@@ -1033,4 +1033,6 @@ h5, p{font-family: 'Helvetica', 'Arial', sans-serif !important;font-style: norma
 /*    display: none; */
 }
 
+html, body{overflow-x: hidden;}
+
 
