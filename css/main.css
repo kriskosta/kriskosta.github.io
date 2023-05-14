@@ -136,7 +136,7 @@ text-red{color: #B82D35;}
 
 
 /* MAIN -------------------- */
-.centerpic{z-index: -1; position: relative;margin-top: -5vw;}
+#centerpic{z-index: -1; position: relative;margin-top: -5vw;}
 
 @media(max-width: 560px){main-section{margin-bottom: 15vw;}}
 
@@ -165,20 +165,25 @@ grid-gap: 20px;}
 
 @media(max-width: 860px){.main-section-grid{flex-direction: column; justify-content: center; align-items: center;} .main-section-grid > div{ grid-template-columns: 100% 100%;} }
 
-@media(max-width: 920px){.centerpic{margin-top: -50px}
+@media(max-width: 920px){#centerpic{margin-top: -50px}
 }
 
 
 
 
 /* FOOTER -------------------- */
-#footerimg{width: 100vw;}
+.footerimg{width: 100vw;}
 
-/* @media(min-width: 920px){
-   #footerimg{ display: block;
-min-height: 300px;} */
+@media(min-width: 920px){
+   .footerimg{ display: block;
+min-height: 300px;}}
 
+@media(max-width: 860px){
+#footer-desktop{display: none;}}
 
+@media(min-width: 860px){#footer-mobile{display: none;}}
+
+#footer-desktop{min-height: 0 !important;}
 
 
 /* SCROLL BAR -------------------- */
