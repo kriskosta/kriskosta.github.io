@@ -174,9 +174,9 @@ grid-gap: 20px;}
 /* FOOTER -------------------- */
 #footerimg{width: 100vw;}
 
-@media(min-width: 920px){
+/* @media(min-width: 920px){
    #footerimg{ display: block;
-min-height: 300px;}
+min-height: 300px;} */
 
 
 
