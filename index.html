@@ -1,0 +1,766 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Kristopher Kosta</title>  
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    
+       <!-- Bootstrap link -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+  
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="icon" type="image/x-icon" href="img/faviconimg.png">
+
+    </head>
+
+<style>
+
+@import "normalize.css";
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+
+	min-height: 100vh;
+	font-family:  "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+	color: hsl(0 0% 100%);
+	overflow-x: hidden;
+}
+
+section {
+	min-height: 100vh;
+	width: 100vw;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(3) {
+	background: hsl(0 0% 100%);
+}
+
+
+
+
+
+.section__content {
+	min-height: 100vh;
+	width: 100vw;
+	display: grid;
+	place-items: center;
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(3) {
+	color: hsl(0 0% 0%);
+}
+section:nth-of-type(1) .section__content {
+	overflow: hidden;
+}
+
+section:nth-of-type(2) {
+  z-index: 2;
+	color: hsl(0 0% 0%);
+	min-height: 200vh;
+	background: hsl(0 0% 0%);
+}
+
+section:nth-of-type(2) p {
+	--opacity: 1;
+	color: hsl(0 0% 100%);
+	font-size: clamp(1.625rem, 2vw + 1rem, 8rem);
+  letter-spacing: 0;
+  font-weight: bold;
+  line-height: 1;
+  width: 30ch;
+  max-width: calc(100% - 4rem);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+section:nth-of-type(1) svg {
+	--opacity: 1;
+	font-weight: 600;
+	font-size: clamp(2rem, 10vw + 1rem, 10rem);
+	transform-origin: 50% 50%;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	opacity: 0.4;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+section:nth-of-type(3) {
+  z-index: 4;
+}
+
+section:nth-of-type(3) h2 {
+  text-align: center;
+  margin: 0;
+}
+section:nth-of-type(3) h2 span {
+  text-transform: uppercase;
+  font-size: .875rem;
+}
+
+section:nth-of-type(3) svg {
+	width: 30vmin;
+	position: fixed;
+	stroke: hsl(0 0% 0%);
+	right: 10%;
+	bottom: 10%;
+	rotate: 10deg;
+}
+
+section:nth-of-type(1) .section__content {
+	overflow: hidden;
+	transform-style: preserve-3d;
+	perspective: 100vh;
+}
+
+svg text {
+	font-size: clamp(2rem, 6vw + 1rem, 6rem);
+	font-weight: 600;
+}
+
+section:nth-of-type(1) {
+	height: 200vh;
+}
+
+
+
+
+.signature path {
+	--draw: 1.025;
+	--end: 1.025;
+  stroke-dasharray: var(--end);
+  stroke-dashoffset: var(--draw);
+}
+
+
+
+@supports (animation-timeline: scroll()) {
+  section { view-timeline-name: --section; }
+
+  section:nth-of-type(1) svg {
+  	transform: unset;
+  	translate: -50% -50%;
+    animation: blow-out both ease-in, fade-in both ease-in;
+  	animation-timeline: --section;
+	  animation-range: exit-crossing 10% exit 0%, exit-crossing 10% exit-crossing 25%;
+  }
+  section:nth-of-type(2) p {
+    animation: fade-in both linear, fade-out both linear;
+    animation-timeline: --section;
+    animation-range: entry 10% entry 35%, exit 0% exit 25%;
+  }
+  .video-wrap {
+    animation: fade-in both linear, fade-out both linear;
+    animation-timeline: --section;
+    animation-range: entry 0% entry 25%, exit 10% exit 35%;
+    
+  }
+
+  .signature path {
+  	animation: draw both linear;
+  	animation-timeline: --section;
+  	animation-range: entry 50% entry 80%;
+  }
+  .signature :is(.eye, .nose) {
+  	animation: draw both linear, fill both linear;
+  	animation-timeline: --section;
+  }
+  .signature :is(.ear, .eye) {
+  	animation-range: entry 80% entry 90%;
+  }
+  .signature .nose {
+  	animation-range: entry 90% entry 100%;
+  }
+  @keyframes fade { to { opacity: 0; }}
+  @keyframes fade-in { to { opacity: var(--opacity, 0.2); }}
+  @keyframes fade-out { to { opacity: 0; }}
+  @keyframes draw { to { stroke-dashoffset: 0; }}
+  @keyframes fill { to { fill: currentColor; }}
+  @keyframes blow-out {
+    0%, 95% { background: transparent; }
+    to { transform: translateZ(99vh); background: black; }
+  }
+}
+
+section:nth-of-type(2) p{text-align: center;}
+
+@media (max-width: 480px) {
+  svg text {font-size: clamp(1.5rem, 1vw + 1rem, 1rem);}
+}
+  </style>
+<body>
+<section>
+    <div class="section__content">
+      <!-- <h1>Your Name</h1> -->
+      <svg>
+        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+          HI, MY NAME IS KRIS
+        </text>
+      </svg>
+    </div>
+  </section>
+  
+
+
+<!-- ------------- Main page-------------  -->
+<section>
+
+  <!-- <img src="img/kriscowboycircleicon.png"> -->
+  <p> I design & develop websites, here's my portfolio</p>
+
+
+</section>
+
+<div class="portfolio-container">
+    
+    
+<!--   Nav Body   -->
+	  
+      <h1 id="sectionheader"> <a class="" href="./index"><img src="img/logo.png" id="logoimg" draggable="false"></a> <br>
+	      Portfolio Navigation</h1>  
+    <hr>
+    <div class="nav-body">  
+     <ul>
+       <li><a href="#figma-design-scroll"> Web Design </a></li>
+       <li><a href="#featured-site-scroll"> Featured Websites </a></li>
+       <li><a href="#design-example-scroll"> Design Demos </a></li> 
+          <li><a href="#interactive-element-scroll"> Interactive Elements</a></li> <div class="vl"></div>
+          
+       <br>
+          <li><a href="#email-scroll"> HTML Email</a></li>
+<!--           <li><a href="#project-scroll"> Projects</a></li>            -->
+</ul> </div> 
+    
+    
+	   
+  
+  
+  <!--   FIGMA DESIGN EXAMPLES   -->
+    <div class="nav-anchor" id="figma-design-scroll"></div>
+    
+    <div class="centerdiv"><h1 id="sectionheader"> Web Design Examples</h1></div> 
+    <br> <br>
+	
+     <div class="portfolio-container" id="figmaiframe">
+	   
+	        <!-- 	 MOCKUP DOWN PAYMENT HUNTERS     -->
+          <div class="iframe-wrapper"> 
+            <img class="overlay" src="imgcover/dphcover.svg" alt="Loading...">
+            <iframe id="pdf" src="https://drive.google.com/file/d/1PkbyWIKkPikFGFECgp_zOmx_BuzmBbOH/preview"></iframe>
+          </div>
+         
+	     
+	      <!-- 	 MOCKUP TRON     -->
+        <div class="iframe-wrapper"> 
+          <img class="overlay" src="imgcover/tron.png" alt="Loading...">
+          <iframe id="pdf" src="https://drive.google.com/file/d/1xOjkcL4aCPNDmXG-4fCmPmbxUpTY0Khi/preview"></iframe>
+        </div>
+	     
+	      <!-- 	 MOCKUP ELO Security     -->
+	      <div class="iframe-wrapper"> 
+                <img class="overlay" src="imgcover/elo.png" alt="Loading...">
+                <iframe id="pdf" src="https://drive.google.com/file/d/1zz5zHf2AR19PYLHZGZlQCtwmwZyo3e7B/preview"></iframe>
+              </div>
+	     
+	     <!-- 	 MOCKUP History Museam     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/history.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1Gl0HuJBKwGaO5n-Ocr8PWR3QWhdooArf/preview"></iframe>
+      </div>
+	     
+	      <!-- 	 I got game basketball     -->
+        <div class="iframe-wrapper"> 
+          <img class="overlay" src="imgcover/igg.png" alt="Loading...">
+          <iframe id="pdf" src="https://drive.google.com/file/d/1vVqvW6CwZLIOtwby8anSFxpYMwO4eV4I/preview"></iframe>
+        </div>
+	    
+	     <!-- 	 MOCKUP ROARK     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/roark.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1HNPRnjoS7nmVK3kgz2czoSq1ytMvzeX2/preview"></iframe>
+      </div>
+	
+	      <!-- 	 MOCKUP NADAV     -->
+        <div class="iframe-wrapper"> 
+          <img class="overlay" src="imgcover/nadav.png" alt="Loading...">
+          <iframe id="pdf" src="https://drive.google.com/file/d/1r1VwRLUs96u4Prj-273ey_PNSAWmGxcn/preview"></iframe>
+        </div>
+
+	     <!-- 	 MOCKUP Western Shipping     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/shipping.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1YS5uXl2NgIqeYv476uQx_NCdB7yZv7Mk/preview"></iframe>
+      </div>
+	 
+	     
+	     <!-- 	 MOCKUP Travel+     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/travel.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1TlXu2X3XlOoV_zwMN56SpJoBkkyoLFew/preview"></iframe>
+      </div>
+	      
+	     <!-- 	 MOCKUP Cloudsource     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/cloud.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1s91haZSxgQVOOWZO4-UXzQbLY0wh_bTp/preview"></iframe>
+      </div>
+	     
+	      <!-- 	 MOCKUP BBR     -->
+        <div class="iframe-wrapper"> 
+          <img class="overlay" src="imgcover/bbr.png" alt="Loading...">
+          <iframe id="pdf" src="https://drive.google.com/file/d/13QMWF9PiM0jkFM0foNoSZ9oL9hMjJ-il/preview"></iframe>
+        </div>
+	   
+	     <!-- 	 MOCKUP Landmark Trips     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/trips.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1VbN4ekZa2-A_0m-DtQTmGFuw9UU4K4Zi/preview"></iframe>
+      </div>
+    
+		<!-- 	 MOCKUP Architecture     -->
+    <div class="iframe-wrapper"> 
+      <img class="overlay" src="imgcover/emil.png" alt="Loading...">
+      <iframe id="pdf" src="https://drive.google.com/file/d/12XS4baC7Vh0tdiqVxmB4NA3gO6VW09fZ/preview"></iframe>
+    </div>
+	  
+	     <!-- 	 MOCKUP SNOWSENSE     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/snowsense.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1TGj83w1C1uCnb3nKdjRTfkT_0PreRXQx/preview"></iframe>
+      </div>   
+    
+	     <!-- 	 MOCKUP Clothes collection     -->
+       <div class="iframe-wrapper"> 
+        <img class="overlay" src="imgcover/collection.png" alt="Loading...">
+        <iframe id="pdf" src="https://drive.google.com/file/d/1NDY6DVTX709HA9Ea4Bpm6xR4KdVTc7eY/preview"></iframe>
+      </div>
+	     
+	 <!-- 	 Plumber Bags     -->
+   <div class="iframe-wrapper"> 
+    <img class="overlay" src="imgcover/bag.png" alt="Loading...">
+    <iframe id="pdf" src="https://drive.google.com/file/d/1IBO7ocGM7QldKKeDXLqC-OU8fkE9IAhK/preview"></iframe>
+  </div>
+
+
+
+	     
+	</div>
+    
+<!--   WEBSITES MAIN SECTION   -->
+    
+    
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#37affc" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,272C640,288,800,288,960,261.3C1120,235,1280,181,1360,154.7L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z" id="wave"></path></svg>
+  
+  <div class="project-container">
+ 
+   
+    
+<!--  WEBSITE SECTION  -->
+      <div class="nav-anchor" id="featured-site-scroll"></div>
+    
+  <website-section>
+   <div class="centerdiv"><h1 id="sectionheader"> Featured Websites</h1></div> 
+  
+  
+ <div class="portfolio-item-container">
+
+
+	 	              <!--    ITEM       -->
+          <a href="https://www.marriedbymariella.com/"> <div class="portfolio-item">
+                  <img src="img/MBMthumbnail.png" alt="">
+         <div class="item-caption">
+           Married By Mariella | Made For Client
+           </div>
+           </div> </a>
+
+	 
+	              <!--    ITEM       -->
+          <a href="https://www.roarkestate.com/"> <div class="portfolio-item">
+                  <img src="img/roarkthumbnail.PNG" alt="">
+         <div class="item-caption">
+           ROARK | Made For Client
+           </div>
+           </div> </a>
+
+                <!-- ITEM    -->   
+          <a href="https://heroesarethefuture.com/"> <div class="portfolio-item">
+                  <img src="img/heros.png" alt="">
+         <div class="item-caption">
+           HEROS | Made For Client
+           </div>
+           </div> </a> 
+         
+	 
+	 	           <!--    ITEM       -->
+          <a href="https://davidsprivateoffice.com/"> <div class="portfolio-item">
+                  <img src="img/davidthumbnail.png" alt="">
+         <div class="item-caption">
+           David Ruezga Law | Made For Client
+           </div>
+           </div> </a>
+
+	 
+	        <!--    ITEM       -->
+            <a href="https://plumberbags.com/"> <div class="portfolio-item">
+                <img src="img/plumberbagsthumbnail.PNG">
+       <div class="item-caption">
+       Plumberbags | Made For Client
+         </div>
+         </div> </a>
+	 
+	 
+	 
+	 	        <!--    ITEM       -->
+            <a href="https://igotgametraining.com/"> <div class="portfolio-item">
+                <img src="img/igotgamethumbnail.PNG">
+       <div class="item-caption">
+       I GOT GAME | Made For Client
+         </div>
+         </div> </a>
+
+	    <!--    ITEM       -->
+          <a href="https://dreamlanddrones.com/"> <div class="portfolio-item">
+                  <img src="img/dreamlanddrones.png" alt="">
+         <div class="item-caption">
+           Dreamland Drones | Made For Client
+           </div>
+           </div> </a>
+	 
+             <!--    ITEM       -->
+          <a href="https://kametacapital.com/index.html"> <div class="portfolio-item">
+                  <img src="img/kametacapital.PNG" alt="">
+         <div class="item-caption">
+           Kameta Capital | Made For Client
+           </div>
+           </div> </a>
+      
+      
+
+<!--      
+            <a href="https://strikewebservices.com/"> <div class="portfolio-item">
+                <img src="img/strikewebservices.jpg">
+       <div class="item-caption">
+       Strike Web Services | Made For Client
+         </div>
+         </div> </a>
+      
+ 
+          <a href="https://strike.services/"> <div class="portfolio-item">
+                  <img src="img/strikeservices.png">
+         <div class="item-caption">
+         Strike Services | Made For Client
+           </div>
+           </div> </a> -->
+         
+        
+            <!--    ITEM       -->
+          <a href=" http://www.relevad.com/"> <div class="portfolio-item">
+                  <img src="img/relevad.png" alt="">
+         <div class="item-caption">
+         Relevad | Website For Client
+           </div>
+           </div> </a>
+         
+        <!--    ITEM       -->
+          <a href="https://felixautorepair.netlify.app/"> <div class="portfolio-item">
+                  <img src="img/felixauto.png" alt="">
+         <div class="item-caption">
+         Felix Auto Repair | Website For Client
+           </div>
+           </div> </a>
+         
+         
+         
+         </div>
+
+    
+    
+  
+
+    </website-section>
+  <br> <br>
+       
+    <div class="nav-anchor" id="design-example-scroll"></div>
+    
+       <div class="centerdiv" ><h1 id="sectionheader"> Single Page Design Demos</h1></div> 
+    
+     
+         <div class="portfolio-item-container">
+      
+           <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/dyjbRdX"> <div class="portfolio-item">
+                  <img src="img/chargeadventureselk.PNG" alt="">
+         <div class="item-caption">
+           Charge Adventures Hunt Page | Made For Client
+           </div>
+           </div> </a>
+           
+
+         
+           <!--    ITEM       -->
+        <a href="https://codepen.io/kjkosta/full/LYQjeOj">  <div class="portfolio-item">
+                 <img src="img/steamodst.png">
+         <div class="item-caption">
+           Halo Website | With Rain Animation
+           </div>
+           </div></a>
+           
+            <!--    ITEM       -->
+         <a href="https://krisprojectcom.github.io/shopdroids/"> <div class="portfolio-item">
+                  <img src="img/starwarsdroid.jpg">
+         <div class="item-caption">
+           Star Wars Style Product Page
+           </div>
+           </div> </a>
+           
+          
+              <!--    ITEM       -->
+          <a href="https://krisprojectcom.github.io/tacotopia.github.io/"> <div class="portfolio-item">
+                  <img src="img/tacoCapture.jpg" alt="">
+         <div class="item-caption">
+         Tacotopia | Made To Showcase My Skill
+           </div>
+           </div> </a>
+           
+                            <!--    ITEM       -->
+<a href="https://krisprojectcom.github.io/footwareproducts/">  <div class="portfolio-item">
+                  <img src="img/footware.jpg">
+         <div class="item-caption">
+           Footware Product Items | Static Elements
+           </div>
+           </div></a>
+           
+             <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/XWYpLJj"> <div class="portfolio-item">
+                  <img src="img/WOFTJOIN.PNG" alt="">
+         <div class="item-caption">
+           WOFT Join Form | Made For Client
+           </div>
+           </div> </a>
+      
+      
+           
+                 <!--    ITEM       -->
+<a href="https://codepen.io/kjkosta/full/GRrWQjN">  <div class="portfolio-item">
+                  <img src="img/steammetro.png">
+         <div class="item-caption">
+           Steam Store Metro 2033 | With Snow Animation
+           </div>
+           </div></a>
+           
+             <!--    ITEM       -->
+             <a href="https://codepen.io/kjkosta/full/ZEWGQWP"> <div class="portfolio-item">
+                <img src="img/nukesite.png">
+                <div class="item-caption">
+       Nuclear War Survival | Parallax Animation Website
+                  </div>
+                  </div> </a>
+
+
+             </div>
+    
+    
+
+    
+    
+    <!--   INTERATIVE ELEMENTS PORTFOLIO    -->
+    <div class="nav-anchor" id="interactive-element-scroll"></div>
+       <div class="centerdiv"><h1 id="sectionheader"> Interactive Widget Examples</h1></div> 
+    
+    
+    
+         <div class="portfolio-item-container">
+           
+        
+            <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/VwQYpdO"> <div class="portfolio-item">
+                  <img src="img/davidcard.png">
+         <div class="item-caption">
+         David Ruezga Law | 3D Business Card 
+           </div>
+           </div> </a>
+         
+                   <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/oNpVWdr"> <div class="portfolio-item">
+                  <img src="img/travelcardsCapture.jpg">
+         <div class="item-caption">
+         Travel Cards | W/ Shadow & Hover Animations 
+           </div>
+           </div> </a>
+           
+           
+                   <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/xxYqWzd"> <div class="portfolio-item">
+                  <img src="img/navbar3d.png">
+         <div class="item-caption">
+         3D Navigation Bar 
+           </div>
+           </div> </a>
+        
+           
+       
+         
+         <!--    ITEM       -->
+<!--       <a href="https://codepen.io/kjkosta/full/ZEeJyqL">    <div class="portfolio-item">
+                  <img src="https://i.imgur.com/6MQNS0Y.png">
+         <div class="item-caption">
+           Rick and Morty Assassin Business Card
+           </div>
+           </div> </a> -->
+         
+         <!--    ITEM       -->
+          <a href="https://codepen.io/kjkosta/full/RwxNwEV"> <div class="portfolio-item">
+                  <img src="img/unitcoverter.png">
+         <div class="item-caption">
+           Metric/Imperial Unit Converter | JavaScript
+           </div>
+           </div> </a>
+         
+           
+            <!--    ITEM       -->
+<!--           <a href="https://codepen.io/kjkosta/full/xxREqbY"> <div class="portfolio-item">
+                  <img src="https://i.imgur.com/h0EpQXi.png">
+         <div class="item-caption">
+         Carl Jung | Quote Generator
+           </div>
+           </div> </a>
+         
+         -->
+         
+<!--    Container end div     -->
+            </div>
+    
+      </div>   </div>
+  
+ 
+  </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#a3d9fe" fill-opacity="1" d="M0,32L48,42.7C96,53,192,75,288,106.7C384,139,480,181,576,208C672,235,768,245,864,250.7C960,256,1056,256,1152,218.7C1248,181,1344,107,1392,69.3L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+</svg>    
+    
+  
+  
+  
+  <!-- ------------- HTML Email-------------  -->
+  
+      <div class="nav-anchor" id="email-scroll"></div>
+    <div class="centerdiv" id="emailcenter"><h1 id="sectionheader"> HTML Email / Graphic Design </h1></div> 
+ 
+     <div class="portfolio-container" id="figmaiframe">
+       
+       <!--    Email Item Chassis    -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1Tu6NqlY6p1DVdzwsYLrj1c6v7aHBRfwH/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+  
+  <!--    Email Item WOFT SAFETY    -->
+           <div class="iframe-wrapper" id="emailheight">
+             <iframe src="https://drive.google.com/file/d/1c1q94yUJx2fWdV4jZgeUi9xrys1nepxS/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+
+<!--    Email Item IGG Basketball flyer    -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1ahCN0Folto2suzVSLhn7guMNWUHB4_Qh/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+	
+<!--    Email Item  HK   -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1BxYBJMtGgzY-JEX6YJ6v6Tc_c1WMzW0k/preview" object-fit="cover" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+
+
+<!--    Email Item  Crossfield   -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1X0iJ7tWsQ3EswJnBRs6CnVzJ1cr-JN0c/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+
+  <!--    Email Item Signature    -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1ZfHy3jET77_skKOztWaY5JxAF-AvHBEj/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+
+<!--    Email Item  Lena   -->
+           <div class="iframe-wrapper" id="emailheight">
+             <iframe src="https://drive.google.com/file/d/1MLCzWT6tbPq2Wm2ZXzO3N9t6gzGk0vgr/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+
+
+
+
+
+<!--  NEW END-->
+  
+<!--    Email Item  Camera 1   -->
+           <div class="iframe-wrapper" id="emailheight"> 
+             <iframe src="https://drive.google.com/file/d/1VJg-q8ZYUb3T4lRDbZL7dzdBvaq4SXFo/preview" width="640" height="480" allow="autoplay"></iframe> </iframe> </div>
+  
+<!--    Email Item  Camera 2   -->
+    <div class="iframe-wrapper" id="emailheight"> 
+           <iframe src="https://drive.google.com/file/d/1EcvoRy8NqGqILofryAJXdenLRFYAP6qc/preview" width="640" height="480" allow="autoplay"></iframe> </div>
+  
+<!--    Email Item  Food service   -->
+    <div class="iframe-wrapper" id="emailheight"> 
+           <iframe src="https://drive.google.com/file/d/1-rQzfZ7auh-dPy5xaVPjW_vRUCpI_AOD/preview" width="640" height="480" allow="autoplay"></iframe> </div>
+ </div>
+  
+  
+
+ </div>
+  
+    </section>     
+
+
+  
+  <br> <br>
+
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+
+    <script>
+
+// document.getElementById('pdf').onload = function() {
+//   document.querySelector('.overlay').style.display = 'none';
+// };
+
+document.querySelectorAll('.iframe-wrapper').forEach(function(wrapper) {
+  var overlay = wrapper.querySelector('.overlay');
+  var iframe = wrapper.querySelector('iframe');
+
+  // Hide overlay when PDF is loaded
+  iframe.onload = function() {
+    overlay.style.display = 'none';
+  };
+});
+
+
+
+    </script>
+
+</body>
+</html>
